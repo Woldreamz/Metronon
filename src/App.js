@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Count away</p>
+        <p>Add To The Total</p>
       </header>
       <form onSubmit={handleSubmit}>
       <input type='number' name='counter' placeholder='Type here...' onChange={handleChange} />
