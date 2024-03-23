@@ -35,12 +35,12 @@ function App() {
 
   async function handleSubmit(e){
     e.preventDefault();
-    const response = await postData({url: "http://127.0.0.1:8000/total/add/", body: data})
+    const response = await postData({url: `${process.env.REACT_APP_URL}total/add/`, body: data})
     setValue(response.data)
   }
  
   async function initialValue(){
-    const response = await getData("http://127.0.0.1:8000/total/view/")
+    const response = await getData(`${process.env.REACT_APP_URL}total/view/`)
     setValue(response.data)
   }
   useEffect(() => {
